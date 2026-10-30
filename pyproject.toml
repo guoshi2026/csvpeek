@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "csvpeek"
+version = "0.1.0"
+description = "Zero-dependency CSV profiler: column types, nulls, cardinality and ranges"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["csv", "profiling", "data-quality", "cli", "zero-dependency"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Environment :: Console",
+    "Topic :: Utilities",
+]
+
+[project.scripts]
+csvpeek = "csvpeek.cli:main"
+
+[tool.setuptools]
+packages = ["csvpeek"]
